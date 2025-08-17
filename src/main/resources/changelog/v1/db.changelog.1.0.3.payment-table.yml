@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-payment-table-for-lesson-14
+      author: rahimovaa
+      changes:
+        - createTable:
+            tableName: payments
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: transaction_id
+                  type: VARCHAR(255)
+              - column:
+                  name: amount
+                  type: DECIMAL
+              - column:
+                  name: status
+                  type: VARCHAR(255)
